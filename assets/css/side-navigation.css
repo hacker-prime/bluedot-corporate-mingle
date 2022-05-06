@@ -1,0 +1,89 @@
+/* // Animated Sidebar Menu - https://codepen.io/ephs23/pen/jJMRLE */
+
+  /* body {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    } */
+  
+  .side-nav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    /* z-index: 1; */
+    z-index: 100;
+    top: 0;
+    right: 0;
+    /* background-color: #111; */
+    background-color: #fff;
+    /* opacity: 0.9; */
+    overflow-x: hidden;
+    padding-top: 60px;
+    transition: 0.7s;
+  }
+  
+  .side-nav a {
+    display: block;
+    padding: 20px 30px;
+    text-decoration: none;
+    color: #000;
+    font-size: 25px;
+  }
+  .side-nav a:hover {
+    color: #ccc;
+    transition: 0.4s;
+  }
+  
+  .side-nav .close {
+    position: absolute;
+    top: -15px;
+    right: -10px;
+    margin-left: 50px;
+    font-size: 33px;
+  }
+  
+  .slide a {
+    /* color: #000; */
+    color:#1276ba;
+    font-size: 36px;
+  }
+  
+  #side-nav-content {
+    /* padding: 20px; */
+    transition: margin-left 0.7s;
+    overflow: hidden;
+    display: none;
+  } 
+
+  #text {
+    width: 90%;
+    padding: 5%;
+  }
+
+
+  /* Please note that in order to have a better experience that you have to show or remove html elements at the same starting point/same value with one being max-width and the other being min-width as shown below
+  In other words, at a specific width (in this case 955px) certain things are shown and removed at the same time. */
+  @media only screen and (max-width: 955px) {
+    /* This was take from style.css We need to hide the menu icon that was shown origianlly in order to accomodate the side navigation code/tutorial and it's own menu icon */
+    .nav__toggle{
+        display:none;
+    }
+
+    #side-nav-content{
+      display: block;
+    }
+
+    .bd-grid {
+      margin-top:10px;
+    }
+
+  }
+
+  /* This was take from style.css We need to hide the menu icon that was shown origianlly in order to accomodate the side navigation code/tutorial and it's own menu icon */
+  @media only screen and (min-width: 955px) {
+
+    .slide{
+        display: none;
+    }
+
+  }
