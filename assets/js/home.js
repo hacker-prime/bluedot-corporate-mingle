@@ -21,7 +21,7 @@ const data = {
                 label: 'You',
                 data: [48, 40, 75, 100, 27, 33],
                 fill: true,
-                backgroundColor: 'rgba(54, 162, 235, 0.2)',
+                backgroundColor: 'rgba(255,255,255,0.5)',
                 borderColor: 'rgb(255, 255, 255)',
                 pointBackgroundColor: 'rgb(255, 255, 255)',
                 pointBorderColor: '#fff',
@@ -32,12 +32,12 @@ const data = {
                 label: 'Competitor',
                 data: [59, 90, 45, 56, 65, 100],
                 fill: true,
-                backgroundColor: 'rgba(54, 162, 235, 0.2)',
-                borderColor: 'rgb(54, 162, 235)',
-                pointBackgroundColor: 'rgb(54, 162, 235)',
+                backgroundColor: 'rgba(192,192,192,0.3)',
+                borderColor: 'rgba(0,57,166)',
+                pointBackgroundColor: 'rgba(0,57,166)',
                 pointBorderColor: '#fff',
                 pointHoverBackgroundColor: '#fff',
-                pointHoverBorderColor: 'rgb(54, 162, 235)'
+                pointHoverBorderColor: 'rgba(0,57,166)'
                }
              ]
   };
@@ -60,11 +60,17 @@ const chart = new Chart(ctx, {
                 scales: {
                     r: {
                         pointLabels: {
-                                color: 'white'
+                                color: 'white',
+                                // https://stackoverflow.com/questions/59932763/how-to-increase-size-and-family-in-a-radars-chartjs-label
+                                font: {
+                                    // size: 13,
+                                    weight:600,
+                                    family:'Poppins'
+                                  }
                         },
                 // https://stackoverflow.com/questions/60789217/chartjs-radar-chart-radar-lines-color        
                         grid: {
-                                color: "white",
+                                color: "white"
                         },
                         }
                 },
@@ -75,7 +81,7 @@ const chart = new Chart(ctx, {
                         display: true,
                         labels: {
                             color: 'rgb(255, 255, 255)'
-                        }
+                        },
                     }
                 }                
       
@@ -168,6 +174,6 @@ setInterval(function() {
     updatedDataSet = [arr[0], arr[1], arr[2], arr[3], arr[4], arr[5]];
     updatedDataSet2 = [arr2[0], arr2[1], arr2[2], arr2[3], arr2[4], arr2[5]];
 
-    updateGraph(chart, '31-43', 'rgba(54, 162, 235, 0.2)', 'rgb(54, 162, 235)', updatedDataSet,updatedDataSet2);
+    updateGraph(chart, '31-43', 'rgba(54, 162, 235, 0.2)', 'rgba(0,57,166)', updatedDataSet,updatedDataSet2);
 
 }, 3000);

@@ -18,7 +18,7 @@
         </div>
 
         <div class="home_illustration">
-            <canvas id="myChart" width="475" height="475"></canvas>
+            <canvas id="myChart" width="525" height="525"></canvas>
         </div>
 
     </div>
