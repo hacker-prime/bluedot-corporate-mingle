@@ -130,12 +130,19 @@
         flex-direction: column;
     }
 
+    .btn{
+        padding: 0.5rem 1rem;
+        font-size: 1rem !important;
+    }
+
     /* .l-header{
         padding:unset;
     } */
 
     .bgcolor{
-        height: 105vh;  
+        /* height: 125vh; */
+        /* height: 105vh;   */
+        height: 96vh;
     }
 
     .home_container {
@@ -144,8 +151,8 @@
       gap:50px;
     }
     .home_text {
-        font-size: 0.9rem;
-        padding-top: 5px;
+        font-size: 1rem;
+        padding-top: 15px;
     }
     canvas{
         width:380px;
@@ -169,7 +176,21 @@
     } */
 
     .bgcolor {
-        height: 145vh;
+        /* height: 145vh; */
+        height: 125vh;
+    }
+
+    section{
+        height: 130vh;
+    }
+
+    .btn{
+        padding: 0.5rem 1rem;
+        font-size: 1rem !important;
+    }
+
+    .home_text{
+        padding-top: 20px;
     }
 
 }

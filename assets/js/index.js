@@ -79,6 +79,12 @@ window.onscroll = function() {
         // https://www.delftstack.com/howto/javascript/change-image-src-javascript/#:~:text=Change%20the%20Source%20of%20an,image%20using%20the%20src%20property.
         document.getElementById("logo").src="assets/images/bluedot logo - complex.png";
 
+        // var side_nav_icon = document.querySelectorAll(".slide a");
+        // side_nav_icon.style.color = "#0039A6";
+        var side_nav_icon = document.getElementById("sidenavigationicon");
+        side_nav_icon.style.color ="#0039A6";
+
+
         myNav.classList.add("scroll");
 
         var x = document.querySelectorAll(".nav__link");
@@ -96,22 +102,18 @@ window.onscroll = function() {
                 // https://stackoverflow.com/questions/29581925/change-css-class-by-javascript-when-default-class-is-set-by-id
                 // document.getElementById('signup').className = 'signup'; For some reason this affects the color of the pseudo selector on the last navigation menu item of contact and changes it to white
             } else{
-                y[i].style.setProperty("--special-blue", "#A4CDFF");
+                y[i].style.setProperty("--special-blue", "#0039A6");
                 console.log(y.length);
             }
         }
-
-    //     if(i == y.length){
-    //         y[i].style.setProperty("--special-blue", "#0039A6");
-    //    }else{
-    //         y[i].style.setProperty("--special-blue", "#A4CDFF");
-    //    }
-
-
     } else {
 
             // https://www.delftstack.com/howto/javascript/change-image-src-javascript/#:~:text=Change%20the%20Source%20of%20an,image%20using%20the%20src%20property.
             document.getElementById("logo").src="assets/images/bluedot-white.png";
+            var side_nav_icon = document.getElementById("sidenavigationicon");
+            side_nav_icon.style.color = "#fff";
+            var mobilescroll = document.getElementById("scroll");
+            mobilescroll.style.color ="#0039A6";
 
             myNav.classList.remove("scroll");
             var x = document.querySelectorAll(".nav__link");

@@ -14,11 +14,12 @@
         <a href="#" class="close" onClick="closeSlideMenu()">
         <i class="fas fa-times"></i>
         </a>
-        <a href="#">Home</a>
+        <a href="#main" onclick="closeSlideMenu()">Home</a>
         <!-- <a href="#">About</a> -->
-        <a href="#">Services</a>
+        <a href="#giveaway" onclick="closeSlideMenu()">Giveaway</a>
+        <a href="#services" onclick="closeSlideMenu()">Services</a>
         <!-- <a href="#">Portfolio</a> -->
-        <a href="#">Contact</a>
+        <a href="#contact" onclick="closeSlideMenu()">Contact</a>
     </div>
 
   </div>

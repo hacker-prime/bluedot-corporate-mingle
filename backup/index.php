@@ -28,6 +28,8 @@
 
     <?php require_once("homepage/home.php")?>
 
+    <?php require_once("homepage/giveaway/giveaway.php")?>
+
     <?php require_once("homepage/services.php")?>
 
     <section id="contact">

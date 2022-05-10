@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="assets/css/style.css" />
     <link rel="stylesheet" href="assets/css/home.css" />
     <link rel="stylesheet" href="assets/css/side-navigation.css" />
+    <link rel="stylesheet" href="assets/css/giveaway.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js" integrity="sha512-QSkVNOCYLtj73J4hbmVoOV6KVZuMluZlioC+trLpewV8qMjsWqlIQvkn1KGX2StWvPMdWGBqim1xlC8krl1EKQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <!-- ===== BOX ICONS ===== -->
@@ -27,10 +28,12 @@
 
     <?php require_once("homepage/navigation/main-navigation.php") ?>
 
-    <main>
+    <main id="main">
 
         <?php require_once("homepage/home.php")?>
 
+        <?php require_once("homepage/giveaway/giveaway-html.php")?>
+    
         <?php require_once("homepage/services.php")?>
 
         <section id="contact">
@@ -41,6 +44,7 @@
 
     <script src="assets/js/index.js"></script>
     <script src="assets/js/home.js"></script>
+    <script src="assets/js/giveaway.js"></script>
 
 </body>
 

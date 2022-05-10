@@ -120,19 +120,19 @@ function updateGraph(chart, label, color,borderColor, data,data2) {
     // https://stackoverflow.com/questions/16626735/how-to-loop-through-an-array-containing-objects-and-access-their-properties - the answer with 246 votes
     chart.data.datasets.forEach((element,index,array) => {
 
-        console.log('Element: ' + element.label);
+        // console.log('Element: ' + element.label);
             //Element: 18-30
             //Element: 31-43
 
-        console.log('Index: ' + index);        
+        // console.log('Index: ' + index);        
 
-        console.log('Data Set Array: ' + array.data);
+        // console.log('Data Set Array: ' + array.data);
             // Data Set Array: 48,40,75,100,27,33
             // Data Set Array: 59,90,45,56,65,70
 
     
 
-        console.log('Array Length: ' + chart.data.datasets.length); 
+        // console.log('Array Length: ' + chart.data.datasets.length); 
             //2
 
         // array[index].data = data;
@@ -145,8 +145,8 @@ function updateGraph(chart, label, color,borderColor, data,data2) {
 
     chart.update();
 
-    console.log(chart.data.datasets[0].label); //18-30
-    console.log(chart.data.datasets[1].label); //31-43
+    // console.log(chart.data.datasets[0].label); //18-30
+    // console.log(chart.data.datasets[1].label); //31-43
 
 }
 
@@ -168,8 +168,8 @@ setInterval(function() {
 
     }
 
-    console.log(arr);
-    console.log(arr2);
+    // console.log(arr);
+    // console.log(arr2);
 
     updatedDataSet = [arr[0], arr[1], arr[2], arr[3], arr[4], arr[5]];
     updatedDataSet2 = [arr2[0], arr2[1], arr2[2], arr2[3], arr2[4], arr2[5]];
