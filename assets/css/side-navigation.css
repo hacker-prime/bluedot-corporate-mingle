@@ -26,7 +26,7 @@
     display: block;
     padding: 20px 30px;
     text-decoration: none;
-    color: #000;
+    color: #1da1f2;
     font-size: 25px;
   }
   .side-nav a:hover {
@@ -43,8 +43,7 @@
   }
   
   .slide a {
-    /* color: #000; */
-    color:#1276ba;
+    color:#fff;
     font-size: 36px;
   }
   
@@ -73,9 +72,9 @@
       display: block;
     }
 
-    .bd-grid {
+    /* .bd-grid {
       margin-top:10px;
-    }
+    } */
 
   }
 

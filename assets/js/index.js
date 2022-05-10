@@ -40,35 +40,6 @@ function scrollActive(){
 
 console.log("Scroll Bar: " + window.scrollY);
 
-var a = document.getElementById("home");
-var topPos = a.offsetTop;
-console.log("Home Section - Section Top: " + topPos);
-
-
-var about = document.getElementById("about");
-var topPosAbout = about.offsetTop;
-console.log("About Section - Section Top: " + topPosAbout);
-
-
-var services = document.getElementById("services");
-var topPosServices = services.offsetTop;
-console.log("Services Section - Section Top: " + topPosServices);
-
-
-var features = document.getElementById("features");
-var topPosFeatures = features.offsetTop;
-console.log("Features Section - Section Top: " + topPosFeatures);
-
-
-var partners = document.getElementById("partners");
-var topPosPartners = partners.offsetTop;
-console.log("Partners Section - Section Top: " + topPosPartners);
-
-
-var b = document.getElementById("contact");
-var topPos2 = b.offsetTop;
-console.log("Contact Section - Section Top: " + topPos2);
-
 // https://developer.mozilla.org/en-US/docs/Web/API/Window/innerHeight
 let intViewportHeight = window.innerHeight;
 console.log("Height of the Window: " +intViewportHeight);
@@ -95,3 +66,67 @@ function openSlideMenu () {
     document.getElementById('menu').style.width = '0';
     document.getElementById('side-nav-content').style.marginLeft = '0';
   }
+
+
+//   https://stackoverflow.com/questions/39802412/change-navbar-color-while-scrolling
+
+var myNav = document.getElementById("scroll");
+
+window.onscroll = function() {
+    "use strict";
+    if (document.body.scrollTop >= 50 || document.documentElement.scrollTop >= 50) {
+
+        // https://www.delftstack.com/howto/javascript/change-image-src-javascript/#:~:text=Change%20the%20Source%20of%20an,image%20using%20the%20src%20property.
+        document.getElementById("logo").src="assets/images/bluedot logo - complex.png";
+
+        myNav.classList.add("scroll");
+
+        var x = document.querySelectorAll(".nav__link");
+        for (let i = 0; i < x.length; i++) {
+           x[i].style.color = "#0039A6";
+        }
+
+        // https://stackoverflow.com/questions/4481485/changing-css-pseudo-element-styles-via-javascript
+        var y = document.querySelectorAll(".nav__link");
+        for (let i = 0; i <y.length; i++) {
+            // https://ourcodeworld.com/articles/read/332/how-to-check-if-an-element-of-an-array-is-the-last-within-a-loop-in-javascript
+            if((i + 1) == (y.length)){
+                console.log("Last iteration with item : " + i);
+                y[i].style.setProperty("--special-blue", "#fff");
+                // https://stackoverflow.com/questions/29581925/change-css-class-by-javascript-when-default-class-is-set-by-id
+                // document.getElementById('signup').className = 'signup'; For some reason this affects the color of the pseudo selector on the last navigation menu item of contact and changes it to white
+            } else{
+                y[i].style.setProperty("--special-blue", "#A4CDFF");
+                console.log(y.length);
+            }
+        }
+
+    //     if(i == y.length){
+    //         y[i].style.setProperty("--special-blue", "#0039A6");
+    //    }else{
+    //         y[i].style.setProperty("--special-blue", "#A4CDFF");
+    //    }
+
+
+    } else {
+
+            // https://www.delftstack.com/howto/javascript/change-image-src-javascript/#:~:text=Change%20the%20Source%20of%20an,image%20using%20the%20src%20property.
+            document.getElementById("logo").src="assets/images/bluedot-white.png";
+
+            myNav.classList.remove("scroll");
+            var x = document.querySelectorAll(".nav__link");
+            for (let i = 0; i < x.length; i++) {
+            x[i].style.color = "#fff";
+            }
+
+            var y = document.querySelectorAll(".nav__link");
+            for (let i = 0; i <y.length; i++) {
+            y[i].style.setProperty("--special-blue", "#FFF");
+            }
+    }
+};
+
+  
+  
+  
+   

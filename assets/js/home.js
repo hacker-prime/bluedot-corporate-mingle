@@ -177,3 +177,4 @@ setInterval(function() {
     updateGraph(chart, '31-43', 'rgba(54, 162, 235, 0.2)', 'rgba(0,57,166)', updatedDataSet,updatedDataSet2);
 
 }, 3000);
+

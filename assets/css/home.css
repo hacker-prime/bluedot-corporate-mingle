@@ -1,3 +1,8 @@
+.home{
+    position: relative;
+    overflow: hidden;
+}
+
 .home_container{
     /* https://codepen.io/kirasiris/pen/oJoRNj?editors=1100 */
     /* background: linear-gradient(to bottom, rgba(0,0,0,0.7) 0%,rgba(0,0,0,0.7) 100%) , url(https://images.pexels.com/photos/34676/pexels-photo.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260); */
@@ -12,7 +17,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    /* height: 100vh; This property seems to be a problem for mobile devices, particularly in landscape mode. The front-end code here is taken from shaynhacker.com which is then taken from bedimcode on YouTube and the code on shaynhacker.com works fine in landscape on mobile so I was wondering why it wasn't working for this site and when I removed the height property I no longer had the text inside the home__text div going beyond the screen border where only a part of it could be seen  */
     padding:0 3rem; 
     gap: 150px;    
     /* https://www.viget.com/articles/angled-edges-with-css-masks-and-transforms/ */
@@ -33,6 +38,13 @@
 
 /* This div/class was added so that we could have a background color along side a background image since getting both with the same div/css all at once proved to be a challenge */
 .bgcolor{    
+    /* display: flex;
+    align-items: center;
+    justify-content: center;
+    padding:10px;  */
+    /* height: 100vh; */
+    /* gap: 150px;   */
+
     /* https://developer.mozilla.org/en-US/docs/Web/CSS/gradient/radial-gradient */
     /* https://stackoverflow.com/questions/56324184/how-to-correctly-position-a-radial-gradient-background */
     /* QUESTION - Is it possible to include an image alongside radial-graident at the same time?  */  /* https://stackoverflow.com/questions/65380599/background-image-and-radial-gradient-on-responsive-element */
@@ -48,14 +60,15 @@
 
     /* https://stackoverflow.com/questions/65380599/background-image-and-radial-gradient-on-responsive-element */
     background-color: rgba(0,57,166);
-    background-image:radial-gradient(circle, rgba(0, 0, 0, 0) 25%, rgba(0,57,166) 75%),url("../images/meeting-diverse.png");
+    background-image:radial-gradient(circle, rgba(0, 0, 0, 0) 25%, rgba(0,57,166) 90%),url("../images/meeting-diverse.png");
     background-repeat: no-repeat;
     background-size: cover; 
     /* background-position: 200px, 200px; */
 }
 
 .home_text{
-    font-size: 1.4rem;
+    /* font-size: 1.4rem; */
+    font-size:2rem;
     /* color: var(--darkOne); */
     text-transform: capitalize;
     line-height: 1.4;
@@ -74,17 +87,55 @@
     /* background: radial-gradient(#1da1f2,#0039A6 70%); */
 }
 
-
-@media (max-width: 912px) {
+@media (max-width: 1024px) {
     .home_container {
-      flex-direction: column;
+    gap:0;
     }
 }
 
+@media (max-width: 912px) {
+    .home_container {
+      /* flex-direction: column; */
+      /* padding-top:65%; */
+      clip-path: none;
+    }
+    .bgcolor{
+      background-position-x:center;
+      height: 175vh;  
+    }
+}
+
+@media (max-width: 768px) {
+
+    .bgcolor{
+        height: 140vh;
+    }
+
+
+
+}
+
+@media (min-width: 768px){
+    .home_container {
+        height: 100vh;
+    }
+    .l-header{
+        background-color: transparent;
+    }
+}    
+
 @media screen and (max-width: 470px) {
 
-    .l-header{
+    .home_container {
+        flex-direction: column;
+    }
+
+    /* .l-header{
         padding:unset;
+    } */
+
+    .bgcolor{
+        height: 105vh;  
     }
 
     .home_container {
@@ -94,9 +145,31 @@
     }
     .home_text {
         font-size: 0.9rem;
+        padding-top: 5px;
     }
     canvas{
         width:380px;
         height:380px;
     }
+}
+
+@media screen and (max-width: 365px) {
+
+    canvas{
+        width:360px;
+        height:360px;
+    }
+
+}
+
+@media screen and (max-width: 360px) {
+
+    /* .home_container{
+        padding-top:65%;
+    } */
+
+    .bgcolor {
+        height: 145vh;
+    }
+
 }

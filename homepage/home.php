@@ -1,29 +1,31 @@
-<!-- <section id="home"> -->
+<section class="home" id="home">
 
-    <div class="bgcolor">
+    <div id="bgcolor" class="bgcolor">
 
-    <div class="home_container">
+            <!-- <div></div> -->
+
+            <div class="home_container">
 
 
-    <!-- https://stackoverflow.com/questions/63308864/how-to-set-background-image-to-only-left-half-of-screen -->
-    <!-- https://stackoverflow.com/questions/2941189/how-to-overlay-one-div-over-another-div -->
-        <!-- <div class="bg-image">
-       </div>     -->
+                <!-- https://stackoverflow.com/questions/63308864/how-to-set-background-image-to-only-left-half-of-screen -->
+                <!-- https://stackoverflow.com/questions/2941189/how-to-overlay-one-div-over-another-div -->
+                    <!-- <div class="bg-image">
+                </div>     -->
 
-        <div class="home_text">
-            <h1>Welcome to Bluedot</h1>
-            <h1>Data Driven Decisions</h1>
-            <p>We help to change the way the Caribbean thinks about data.</p>
-            <a class="btn" href="#services">Services</a>
-        </div>
+                    <div class="home_text">
+                        <!-- <h1>Welcome to Bluedot</h1> -->
+                        <h1>Changing the way the Caribbean thinks about data</h1>
+                        <p>We aim to help you make the best possible decision.</p>
+                        <a style="font-size:1.5rem" class="btn" href="#services">Services</a>
+                    </div>
 
-        <div class="home_illustration">
-            <canvas id="myChart" width="525" height="525"></canvas>
-        </div>
+                    <div class="home_illustration">
+                        <canvas id="myChart" width="500" height="500"></canvas>
+                    </div>
+
+            </div>
 
     </div>
 
-    </div>
 
-
-<!-- </section> -->
+</section>

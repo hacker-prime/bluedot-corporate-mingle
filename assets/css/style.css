@@ -57,6 +57,7 @@ html{
     scroll-behavior: smooth;
 }
 body{
+    /* margin:0; */
     margin: var(--header-height) 0 0 0;
     font-family: var(--body-font);
     font-size: var(--normal-font-size);
@@ -87,6 +88,8 @@ img{
     width: 360px;
     object-fit: cover; */
 }
+
+
 
 .logo {
     display: flex;
@@ -130,7 +133,6 @@ img{
   }
 
 
-
   /* #home{
     background-color: bisque;
   }
@@ -167,7 +169,7 @@ img{
 /*===== LAYOUT =====*/
 .bd-grid{
     /* max-width: 1024px; */
-    max-width: 1225px;
+    max-width: 1400px;
     display: grid;
     grid-template-columns: 100%;
     grid-column-gap: 2rem;
@@ -178,13 +180,12 @@ img{
 .l-header{
     width: 100%;
     position: fixed;
-    /* position: sticky; */
     top: 0;
     left: 0;
     z-index: var(--z-fixed);
-    /* background-color: var(--first-color); */
-    /* background-color: white; */
-    padding: 0 3rem;
+    background-color: #0039A6;
+    padding-top: 5px;
+    transition: all .5s ease-in-out;
 }
 
 /*===== NAV =====*/
@@ -194,6 +195,21 @@ img{
     justify-content: space-between;
     align-items: center;
 }
+
+.scroll {
+    background-color: #fff !important;
+}
+
+.nav-colored{
+    background-color: #0039A6;
+}
+
+.nav-transparent{
+    background-color: #fff;
+}
+
+
+
 @media screen and (max-width: 768px){
     .nav__menu{
         position: fixed;
@@ -252,6 +268,14 @@ img{
     color: var(--special-blue);
     font-size: 1.5rem;
     cursor: pointer;
+}
+
+/* https://stackoverflow.com/questions/29581925/change-css-class-by-javascript-when-default-class-is-set-by-id */
+.signup{
+    box-shadow: 2px 2px 30px rgb(0 0 0 / 20%);
+    padding: 0.75rem 1.5rem;
+    border-radius: 3rem;
+    transition: .3s;
 }
 
 /*=== Show menu ===*/

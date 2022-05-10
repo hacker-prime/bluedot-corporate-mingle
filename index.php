@@ -21,18 +21,23 @@
 
 <body>    
 
-    <?php require_once("homepage/navigation/main-navigation.php") ?>
 
     <!-- https://www.youtube.com/watch?v=F0uED-w9E48&list=WL&index=81  https://codepen.io/ephs23/pen/jJMRLE -->
     <?php require_once("homepage/navigation/side-navigation.php") ?>
 
-    <?php require_once("homepage/home.php")?>
+    <?php require_once("homepage/navigation/main-navigation.php") ?>
 
-    <?php require_once("homepage/services.php")?>
+    <main>
 
-    <section id="contact">
+        <?php require_once("homepage/home.php")?>
 
-    </section>
+        <?php require_once("homepage/services.php")?>
+
+        <section id="contact">
+
+        </section>
+
+    </main>
 
     <script src="assets/js/index.js"></script>
     <script src="assets/js/home.js"></script>

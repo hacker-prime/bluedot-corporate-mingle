@@ -1,8 +1,8 @@
-<header class="l-header">
+<div id="scroll" class="l-header">
         <nav class="nav bd-grid">
 
             <div class="logo">
-                <img src="assets/images/bluedot-white.png" alt="Logo" />
+                <img id="logo" src="assets/images/bluedot-white.png" alt="Logo" />
                 <!-- <h3>Bluedot</h3> -->
             </div>
 
@@ -10,11 +10,11 @@
                 <ul class="nav__list">
                     <li class="nav__item"><a href="#home" id="myDIV" class="nav__link active__menu">Home</a></li>
                     <!-- <li class="nav__item"><a href="#about" class="nav__link">About</a></li> -->
-                    <li class="nav__item"><a href="#services" class="nav__link">Services</a></li>
+                    <li class="nav__item"><a href="#services" id="myDIV" class="nav__link">Services</a></li>
                     <!-- <li class="nav__item"><a href="#features" class="nav__link">Features</a></li>
                     <li class="nav__item"><a href="#partners" class="nav__link">Partners</a></li> -->
-                    <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
-                    <li class="nav__item"><a href="#" class="nav__link btn">Sign Up</a></li>
+                    <li class="nav__item"><a href="#contact" id="myDIV" class="nav__link">Contact</a></li>
+                    <li class="nav__item"><a href="#" id="signup" class="nav__link btn">Sign Up</a></li>
                 </ul>
             </div>
 
@@ -31,4 +31,4 @@
             </span>
 
         </nav>
-</header>
+</div>
