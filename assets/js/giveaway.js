@@ -29,7 +29,11 @@ giveawaysubmit.addEventListener("click", function () {
 			var errorMessage = document.getElementById('error');
 			errorMessage.textContent = responseObject.mailError;
 			errorMessage.textContent = responseObject.emptyErrorFailure;
-		}
+		} else if (responseObject.giveaway_emailError == '' && responseObject.giveaway_nameError =='' && responseObject.messageError ==''){
+            var errorMessage = document.getElementById('error');
+			errorMessage.textContent = responseObject.mailError;
+			errorMessage.textContent = responseObject.emptyErrorFailure;
+        }
 
 		if(responseObject.success) {
 			var successMessage = document.getElementById('success');
@@ -39,16 +43,27 @@ giveawaysubmit.addEventListener("click", function () {
 		if(responseObject.giveaway_nameError) {
 			var nameErrorMessage = document.getElementById('nameError');
 			nameErrorMessage.textContent = responseObject.giveaway_nameError;
-		}
+		} else if(responseObject.giveaway_nameError == ''){
+            var nameErrorMessage = document.getElementById('nameError');
+			nameErrorMessage.textContent = responseObject.giveaway_nameError;
+        }
+
 		if(responseObject.giveaway_emailError) {
 			var emailErrorMessage = document.getElementById('emailError');
 			emailErrorMessage.textContent = responseObject.giveaway_emailError;
-		}
+		} else if(responseObject.giveaway_emailError == ''){
+            var emailErrorMessage = document.getElementById('emailError');
+			emailErrorMessage.textContent = responseObject.giveaway_emailError;
+
+        }
 
         if(responseObject.messageError) {
 			var messageErrorMessage = document.getElementById('messageError');
 			messageErrorMessage.textContent = responseObject.messageError;
-		}
+		} else if(responseObject.messageError == ''){
+            var messageErrorMessage = document.getElementById('messageError');
+			messageErrorMessage.textContent = responseObject.messageError;
+        }
 
 		} catch (e) {
             console.log(requestContact.responseText);

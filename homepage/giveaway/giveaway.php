@@ -14,8 +14,9 @@ if (isset($_POST['giveaway_name']) && isset($_POST['giveaway_email']) && isset($
     } else {
         $giveaway_name = test_input($_POST["giveaway_name"]);
         //check if giveaway_name only contains leters andd whitespace
-        if(!preg_match("/^[a-zA-Z]*$/",$giveaway_name)){
-            $giveaway_name_error = "Only letters and white space allowed";
+        // https://stackoverflow.com/questions/15472764/regular-expression-to-allow-spaces-between-words
+        if(!preg_match("/^[a-zA-Z ]*$/",$giveaway_name)){
+            $giveaway_name_error = "Only letters allowed";
         }
     }
 
