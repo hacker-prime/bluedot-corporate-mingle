@@ -1,5 +1,7 @@
 <?php
 
+require_once("configuration.php");
+
 // Inspired by phoenixprime.io which is in turned inspired by HTML/PHP Contact Form Tutorial with Validation and giveaway_email Submit || https://www.youtube.com/watch?v=1CkBsGhux9U
 
 //define variables and set to empty values
@@ -39,12 +41,48 @@ if (isset($_POST['giveaway_name']) && isset($_POST['giveaway_email']) && isset($
 
     if($giveaway_name_error == '' && $giveaway_email_error == '' && !empty($_POST["giveaway_message"]) ){
 
-
-        $giveaway_emailTo = $_POST['giveaway_email'];
-
         // ==========> INSERT FORM DATA INTO DATABASE <==========
+        // https://www.tutorialrepublic.com/php-tutorial/php-mysql-prepared-statements.php
 
-            $success = "Database stage ready to commence";
+            $message2 = test_input($_POST["giveaway_message"]);
+
+            // Taken from phoenixprime.io
+            $timezone = new DateTimeZone('Jamaica');
+            $datetime = new DateTime();
+            $datetime->setTimezone($timezone);
+            $signuptime = $datetime->format('Y-m-d H:i:s');
+
+
+                // $success = "Database stage ready to commence";
+
+                
+            // Prepare an insert statement
+            $sql = "INSERT INTO corporatemingle (company,email, message,time) VALUES (?, ?, ?, ?)";
+            
+            if($stmt = $con->prepare($sql)){
+
+                // Bind variables to the prepared statement as parameters
+                $stmt->bind_param("ssss", $company, $email, $sanitizedmessage,$time);
+                                        
+                /* Set the parameters values and execute the statement to insert a row */
+                $company = $giveaway_name;
+                $email = $giveaway_email;
+                $sanitizedmessage = $message2;
+                $time = $signuptime;
+
+                $stmt->execute();
+                
+                $success = "You'll be updated if you've won the giveaway :) ";
+
+            } else{
+                echo "ERROR: Could not prepare query: $sql. " . $con->error;
+            }
+            
+            // Close statement
+            $stmt->close();
+            
+            // Close connection
+            $con->close();
 
         // ==========> INSERT FORM DATA INTO DATABASE <==========
 

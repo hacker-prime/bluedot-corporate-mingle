@@ -10,7 +10,7 @@
         <div>
 
             <form class="contactform" id="giveawayform" action="" method="post">
-                <h3>Send us a message</h3>
+                <h3>Send Us A Message</h3>
                 <fieldset>
                 <div class="error" id="nameError"></div>
                 <input placeholder="Company" type="text" tabindex="1" name="giveaway_name" id="name">
