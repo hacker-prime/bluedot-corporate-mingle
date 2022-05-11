@@ -5,11 +5,11 @@ require_once("configuration.php");
 // Inspired by phoenixprime.io which is in turned inspired by HTML/PHP Contact Form Tutorial with Validation and giveaway_email Submit || https://www.youtube.com/watch?v=1CkBsGhux9U
 
 //define variables and set to empty values
-$giveaway_name_error = $first_name_error = $giveaway_email_error = $mailError = $emptyErrorFailure = "";
+$giveaway_name_error = $first_name_error = $last_name_error = $giveaway_email_error = $mailError = $emptyErrorFailure = "";
 $giveaway_name = $giveaway_email = $phone = $message = $success = "";
 
 
-if (isset($_POST['first_name']) && isset($_POST['giveaway_name']) && isset($_POST['giveaway_email']) && isset($_POST['giveaway_message'])){    
+if (isset($_POST['first_name'])  && isset($_POST['last_name']) && isset($_POST['giveaway_name']) && isset($_POST['giveaway_email']) && isset($_POST['giveaway_message'])){    
         
     if(empty($_POST["giveaway_name"])) {
         $giveaway_name_error = "Company name is required";
@@ -33,6 +33,18 @@ if (isset($_POST['first_name']) && isset($_POST['giveaway_name']) && isset($_POS
         }
     }
 
+    if(empty($_POST["last_name"])) {
+        $last_name_error = "Last name is required";
+    } else {
+        $last_name = test_input($_POST["last_name"]);
+        //check if giveaway_name only contains leters andd whitespace
+        // https://stackoverflow.com/questions/15472764/regular-expression-to-allow-spaces-between-words
+        if(!preg_match("/^[a-zA-Z ]*$/",$giveaway_name)){
+            $last_name_error = "Only letters allowed";
+        }
+    }
+
+
 
     if(empty($_POST["giveaway_email"])){
         $giveaway_email_error = "Email is required";
@@ -51,7 +63,7 @@ if (isset($_POST['first_name']) && isset($_POST['giveaway_name']) && isset($_POS
     }
 
 
-    if($giveaway_name_error == '' && $giveaway_email_error == '' && !empty($_POST["giveaway_message"]) ){
+    if($first_name_error == '' && $last_name_error == '' && $giveaway_name_error == '' && $giveaway_email_error == '' && !empty($_POST["giveaway_message"]) ){
 
         // ==========> INSERT FORM DATA INTO DATABASE <==========
         // https://www.tutorialrepublic.com/php-tutorial/php-mysql-prepared-statements.php
@@ -69,12 +81,12 @@ if (isset($_POST['first_name']) && isset($_POST['giveaway_name']) && isset($_POS
 
                 
             // Prepare an insert statement
-            $sql = "INSERT INTO corporatemingle (firstname,company,email, message,time) VALUES (?, ?, ?, ?, ?)";
+            $sql = "INSERT INTO corporatemingle (firstname,lastname,company,email, message,time) VALUES (?, ?, ?, ?, ?, ?)";
             
             if($stmt = $con->prepare($sql)){
 
                 // Bind variables to the prepared statement as parameters
-                $stmt->bind_param("sssss", $first_name, $company, $email, $sanitizedmessage,$time);
+                $stmt->bind_param("ssssss", $first_name, $last_name, $company, $email, $sanitizedmessage,$time);
                                         
                 /* Set the parameters values and execute the statement to insert a row */
                 $company = $giveaway_name;
@@ -109,6 +121,7 @@ if (isset($_POST['first_name']) && isset($_POST['giveaway_name']) && isset($_POS
             'mailError' => $mailError,
             'emptyErrorFailure' => $emptyErrorFailure,
             'first_nameError' => $first_name_error,
+            'last_nameError' => $last_name_error,
             'giveaway_nameError' => $giveaway_name_error,
             'giveaway_emailError' => $giveaway_email_error,
             'messageError' => $message

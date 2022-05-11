@@ -48,6 +48,15 @@ giveawaysubmit.addEventListener("click", function () {
 			nameErrorMessage.textContent = responseObject.first_nameError;
         }
 
+		
+		if(responseObject.last_nameError) {
+			var nameErrorMessage = document.getElementById('lastnameError');
+			nameErrorMessage.textContent = responseObject.last_nameError;
+		} else if(responseObject.last_nameError == ''){
+            var nameErrorMessage = document.getElementById('lastnameError');
+			nameErrorMessage.textContent = responseObject.last_nameError;
+        }
+
 		if(responseObject.giveaway_nameError) {
 			var nameErrorMessage = document.getElementById('nameError');
 			nameErrorMessage.textContent = responseObject.giveaway_nameError;
@@ -79,7 +88,7 @@ giveawaysubmit.addEventListener("click", function () {
 		}
 	};
 
-	const contactData = `first_name=${giveaway.first_name.value}&giveaway_name=${giveaway.giveaway_name.value}&giveaway_email=${giveaway.giveaway_email.value}&giveaway_message=${giveaway.giveaway_message.value}`;
+	const contactData = `first_name=${giveaway.first_name.value}&last_name=${giveaway.last_name.value}&giveaway_name=${giveaway.giveaway_name.value}&giveaway_email=${giveaway.giveaway_email.value}&giveaway_message=${giveaway.giveaway_message.value}`;
 
 	requestContact.open('post', 'homepage/giveaway/giveaway.php');
 	requestContact.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');

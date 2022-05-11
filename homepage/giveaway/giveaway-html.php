@@ -17,6 +17,10 @@
                     <input placeholder="First Name" type="text" tabindex="1" name="first_name" id="firstname">
                 </fieldset>
                 <fieldset>
+                    <div class="error" id="lastnameError"></div>
+                    <input placeholder="Last Name" type="text" tabindex="1" name="last_name" id="lastname">
+                </fieldset>
+                <fieldset>
                     <div class="error" id="nameError"></div>
                     <input placeholder="Company" type="text" tabindex="1" name="giveaway_name" id="name">
                 </fieldset>
