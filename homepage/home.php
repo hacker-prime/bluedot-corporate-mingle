@@ -16,7 +16,7 @@
                         <!-- <h1>Welcome to Bluedot</h1> -->
                         <h1>Changing the way the Caribbean thinks about data</h1>
                         <p>We aim to help you make the best possible decision.</p>
-                        <a style="font-size:1.5rem" class="btn" href="#services">Services</a>
+                        <a style="font-size:1.5rem" class="btn" href="#giveaway">Giveaway</a>
                     </div>
 
                     <div class="home_illustration">

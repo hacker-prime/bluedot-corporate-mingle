@@ -124,11 +124,11 @@ img{
       height: 100vh;
   } */
 
-  @media (min-width: 768px){
+  /* @media (min-width: 768px){
     section{
         height: 100vh;
     }
-} 
+}  */
 
 /*===== LAYOUT =====*/
 .bd-grid{

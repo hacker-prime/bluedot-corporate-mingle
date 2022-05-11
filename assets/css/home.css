@@ -180,7 +180,11 @@
         height: 125vh;
     }
 
-    section{
+    /* section{
+        height: 130vh;
+    } */
+
+    .home{
         height: 130vh;
     }
 

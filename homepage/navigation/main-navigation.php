@@ -15,7 +15,7 @@
                 <!-- <li class="nav__item"><a href="#features" class="nav__link">Features</a></li>
                     <li class="nav__item"><a href="#partners" class="nav__link">Partners</a></li> -->
                     <li class="nav__item"><a href="#contact" id="myDIV" class="nav__link">Contact</a></li>
-                    <li class="nav__item"><a href="#" id="signup" class="nav__link btn">Sign Up</a></li>
+                    <li class="nav__item"><a href="#giveaway" id="signup" class="nav__link btn">Sign Up</a></li>
                 </ul>
             </div>
 

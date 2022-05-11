@@ -22,18 +22,6 @@
     <div class="column">
       <div class="card">
         <div class="icon">
-        <i class="fa-solid fa-store"></i>
-        </div>
-        <h3>Shopper & Retail Insights </h3>
-        <p>
-        Mastering Point of Purchase - We uncover who your shoppers are,  their triggers and motivators, and how  to retain and recruit new shoppers to  deliver improved revenue, profit and  customer experience in-store.
-        </p>
-      </div>
-    </div>
-    <!-- Column Three -->
-    <div class="column">
-      <div class="card">
-        <div class="icon">
         <i class="fa-solid fa-magnifying-glass"></i>  
         </div>
         <h3>Data Insights</h3>
@@ -43,5 +31,18 @@
         </p>
       </div>
     </div>
+    <!-- Column Three -->
+    <div class="column">
+      <div class="card">
+        <div class="icon">
+        <i class="fa-solid fa-store"></i>
+        </div>
+        <h3>Shopper & Retail Insights </h3>
+        <p>
+        Mastering Point of Purchase - We uncover who your shoppers are,  their triggers and motivators, and how  to retain and recruit new shoppers to  deliver improved revenue, profit and  customer experience in-store.
+        </p>
+      </div>
+    </div>
+
   </div>
 </section>

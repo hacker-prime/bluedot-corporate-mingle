@@ -81,11 +81,14 @@
 }
 
 /* inspired by home.css */
-/* @media (min-width: 768px){
-    section{
+@media (min-width: 768px){
+    /* section{
+        height: 100vh;
+    } */
+    #contact{
         height: 100vh;
     }
-}  */
+} 
 
 
 @media only screen and (max-width: 600px) {
@@ -98,6 +101,7 @@
     .body__contact{
         /* height: 50vh; */
         /* height: 200px; */
+        margin-bottom: 20px;
     }
 
     .social-media{

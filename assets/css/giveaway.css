@@ -243,6 +243,11 @@ fieldset {
     }
 } 
 
+@media (min-width: 768px){
+    #giveaway{
+        height: 100vh;
+    }
+} 
 
 /* If the browser window is 640px or smaller */
 @media only screen and (max-width: 640px) {
