@@ -142,7 +142,8 @@
     .bgcolor{
         /* height: 125vh; */
         /* height: 105vh;   */
-        height: 96vh;
+        /* height: 96vh; */
+        height:100vh;
     }
 
     .home_container {

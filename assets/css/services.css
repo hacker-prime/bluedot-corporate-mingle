@@ -24,7 +24,7 @@
 .card {
   padding: 3.1em 1.25em;
   text-align: center;
-  background: linear-gradient(0deg, #397ef6 10px, transparent 10px);
+  background: linear-gradient(0deg, #0039A6 10px, transparent 10px);
   background-repeat: no-repeat;
   background-position: 0 0.62em;
   box-shadow: 0 0 2.5em rgba(0, 0, 0, 0.15);
@@ -37,7 +37,7 @@
   height: 2em;
   width: 2em;
   margin: auto;
-  background-color: #397ef6;
+  background-color: #0039A6;
   display: grid;
   place-items: center;
   border-radius: 50%;
@@ -48,7 +48,7 @@
   content: "";
   height: 1.5em;
   width: 1.5em;
-  border: 0.12em solid #397ef6;
+  border: 0.12em solid #0039A6;
   border-radius: 50%;
   transition: 0.5s;
 }
