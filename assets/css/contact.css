@@ -1,0 +1,130 @@
+#contact{
+    display: flex;
+    flex-flow: row wrap;
+    padding: 0 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.body__contact{
+    width:400px;
+    /* height:400px; */
+    background-color:#407BFF;
+    padding: 2.3rem 2.2rem;
+}
+
+
+.body__contact header{
+    font-size: 22px;
+    font-weight: 600;
+    padding: 20px 30px;
+    color: #fff;
+    list-style: none;
+    text-align: center;
+}
+
+.body__contact ul {
+    list-style: none;
+    color:white ;
+}
+
+.icon {
+    width: 28px;
+    margin-right: 0.7rem;
+}
+
+.info{
+    display:block;
+}
+
+.information {
+    display: flex;
+    color: #fff;
+    margin: 0.7rem 0;
+    /* align-items: center; */
+    font-size: 0.95rem;
+}
+
+
+.social-media p {
+    color: #333;
+    text-align: center;
+  }
+  
+  .social-icons {
+    /* https://stackoverflow.com/questions/29580266/align-two-divs-horizontally-one-on-extreme-left-and-the-other-on-extreme-right */
+    display: flex;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    justify-content: center;
+  }
+  
+  .social-icons a {
+    width: 35px;
+    height: 35px;
+    border-radius: 5px;
+    background: #fff;
+    color: #407BFF;
+    text-align: center;
+    line-height: 35px;
+    margin-right: 0.5rem;
+    transition: 0.3s;
+  }
+  
+
+@media only screen and (max-width: 1022px) {
+
+    .body__contact{
+        padding: 1.3rem 1.2rem;
+    }
+
+}
+
+/* inspired by home.css */
+/* @media (min-width: 768px){
+    section{
+        height: 100vh;
+    }
+}  */
+
+
+@media only screen and (max-width: 600px) {
+
+    .body__contact header {
+        padding: 0px;
+        text-align: center;
+    }  
+    
+    .body__contact{
+        /* height: 50vh; */
+        /* height: 200px; */
+    }
+
+    .social-media{
+        text-align: center;
+    }
+
+    .social-icons {
+        /* https://stackoverflow.com/questions/29580266/align-two-divs-horizontally-one-on-extreme-left-and-the-other-on-extreme-right */
+        display: flex;
+        /* margin-top: 0.5rem; */
+        justify-content: center;
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    .social-media p {
+        font-size: 0.8rem;
+      }
+      .social-icons a {
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+      }
+    
+      .icon {
+        width: 23px;
+      }
+}
