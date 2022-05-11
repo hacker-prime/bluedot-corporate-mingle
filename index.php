@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="assets/css/home.css" />
     <link rel="stylesheet" href="assets/css/side-navigation.css" />
     <link rel="stylesheet" href="assets/css/giveaway.css" />
+    <link rel="stylesheet" href="assets/css/services.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js" integrity="sha512-QSkVNOCYLtj73J4hbmVoOV6KVZuMluZlioC+trLpewV8qMjsWqlIQvkn1KGX2StWvPMdWGBqim1xlC8krl1EKQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <!-- ===== BOX ICONS ===== -->
@@ -17,6 +18,19 @@
     <link href="https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css" rel="stylesheet">
 
     <!-- ===== BOX ICONS ===== -->
+
+    <!-- Font Awesome CDN -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+
+    <!-- ===== Font Awesome CDN ===== -->
+
+    <!-- ===== Google Fonts ===== -->
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+
+    <!-- ===== Google Fonts ===== -->
+
 
 </head>
 

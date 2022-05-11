@@ -120,51 +120,9 @@ img{
     transition: .3s;
   }
 
-  /* .btn:hover{
-      background-color: #fff;
-      color: var(--special-blue) !important;
-      box-shadow: 2px 2px 30px rgb(0 0 0 / 20%);
-  } */
-
-
-
   section {
       height: 100vh;
   }
-
-
-  /* #home{
-    background-color: bisque;
-  }
-
-  #about {
-      background-color: aquamarine;
-  }
-
-  #services {
-      background-color: blueviolet;
-  }
-
-  #features {
-    background-color: chocolate;
-  }
-
-  #portfolio{
-      background-color: crimson;
-  }
-
-  #contact{
-      background-color: deeppink;
-  } */
-
-/* ===== MEDIA QUERIES =====*/
-/* For small devices */
-@media screen and (max-width: 600px) {
-
-  }
-
-
-/*===== CLASS CSS ===== */
 
 /*===== LAYOUT =====*/
 .bd-grid{
