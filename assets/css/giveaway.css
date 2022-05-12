@@ -5,11 +5,13 @@
     justify-content: center;
     color:#0039A6;
     text-align: center;
-    padding-top: 50px;
+    /* padding-top: 50px; This will affect the active menu scroll item logic and cause the Giveaway and Bluedot UX item to be highlighted at the same time when you scroll down to BLuedot UX */
+    /* margin-top:110px; This will affect the active menu scroll item logic and cause the Giveaway and Bluedot UX item to be highlighted at the same time when you scroll down to BLuedot UX */
 }
 
 .giveaway_text{
-	padding-top: 25px;
+	/* padding-top: 25px; */
+    padding-top: 60px;
     font-size:2rem;
     text-transform: capitalize;
     line-height: 1.4;
@@ -285,15 +287,22 @@ fieldset {
 	}
 
 	.contact_image_mobile{
-		display: block;
+    display: block;
 		width: 100%;
 	}
+
+
 }
 
 
 
 
 @media screen and (max-width: 470px) {
+
+    #giveaway{    
+        padding-top: 50px;
+    
+    }
 
     .giveaway_text {
         font-size: 1rem;

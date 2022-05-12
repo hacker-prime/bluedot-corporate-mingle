@@ -57,8 +57,8 @@ html{
     scroll-behavior: smooth;
 }
 body{
-    /* margin:0; */
-    margin: var(--header-height) 0 0 0;
+    margin:0;
+    /* margin: var(--header-height) 0 0 0; When in landscape mode on device with a width of 360 it would affect how it look with the background image appearing below the navigation menu when the image should appear behind it and or go all the way to the top */
     font-family: var(--body-font);
     font-size: var(--normal-font-size);
     font-weight: var(--font-medium);

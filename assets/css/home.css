@@ -115,7 +115,7 @@
 
 }
 
-@media (min-width: 768px){
+@media (min-width: 916px){
     .home_container {
         height: 100vh;
     }
@@ -124,7 +124,77 @@
     }
 }    
 
+
+/* The purpose of this is to accomodate for when mobile devices are placed in a landscape orientation. Currently, the problem is that
+the homee section is pushed all the way to the top border of the screen and affects its intended appearance.   */ 
+/* @media (max-width: 916px){
+
+    .l-header{
+        background-color: transparent;
+    }
+}    */
+
+/* https://stackoverflow.com/questions/5735467/how-to-detect-the-device-orientation-using-css-media-queries */
+@media screen and (max-width: 916px) and (orientation:landscape) {
+
+    .l-header{
+        background-color: transparent;
+    }
+
+    .home_container {
+        height: 200vh;
+        padding: 0 1rem;
+    }
+
+    .bgcolor{
+        height:205vh;
+    }    
+
+}
+
+
+@media screen and (max-width: 640px) and (orientation:landscape) {
+
+
+
+    .home_container {
+        height: 125vh;
+        padding: 0rem;
+    }
+
+    .bgcolor{
+        height:125vh;
+    }    
+
+    canvas{
+        width: 300px;
+        height: 300px;
+    }
+
+    .home_text{
+        font-size: .8rem;
+        line-height: unset;
+        padding: 15px;
+    }
+
+    .btn{
+        font-size: 1rem !important;
+    }
+
+}
+
+
+
+
+
+
+
 @media screen and (max-width: 470px) {
+
+    /* Taken from style.css which is in turn inspired by bedimcode on YouTube */
+    body{
+        margin:3rem 0 0 0;
+    }
 
     .home_container {
         flex-direction: column;
