@@ -2,8 +2,9 @@
 
     <div class="giveaway_text">
         <h1>We're giving the gift of insights!</h1>
-        <p>Enter your information below for a chance to win.</p>
-        <p>We're giving away 10 online surveys with report dashboards.</p>
+        <p>Enter your information below for a chance to win.
+           We're giving away free online surveys with report dashboards.
+        </p>
     </div>
 
     <div id="contact_info" class="container_giveaway">
@@ -42,6 +43,10 @@
             </form>
 
         </div>
+
+    </div>
+
+    <div class="bluedotux">
 
     </div>
 

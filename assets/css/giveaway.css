@@ -5,9 +5,11 @@
     justify-content: center;
     color:#0039A6;
     text-align: center;
+    padding-top: 50px;
 }
 
 .giveaway_text{
+	padding-top: 25px;
     font-size:2rem;
     text-transform: capitalize;
     line-height: 1.4;
@@ -237,17 +239,25 @@ fieldset {
 
 }
 
-@media (max-width: 768px){
+/* @media (max-width: 768px){
     #giveaway{
         height: 100vh;
     }
-} 
+}  */
 
 @media (min-width: 768px){
+
     #giveaway{
-        height: 100vh;
+        align-items: center;
     }
-} 
+
+    /* .clip video {
+        max-width: 80%;
+        padding-top:25px;
+    } */
+
+}
+
 
 /* If the browser window is 640px or smaller */
 @media only screen and (max-width: 640px) {
@@ -281,20 +291,13 @@ fieldset {
 }
 
 
-@media (min-width: 768px){
-
-    #giveaway{
-        align-items: center;
-    }
-
-}
 
 
 @media screen and (max-width: 470px) {
 
     .giveaway_text {
         font-size: 1rem;
-        /* padding-top: 15px; */
+        padding-top: 25px;
         /* padding-top: 55px; */
     }    
 

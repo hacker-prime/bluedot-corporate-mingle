@@ -11,6 +11,7 @@
                     <li class="nav__item"><a href="#home" id="myDIV" class="nav__link active__menu">Home</a></li>
                     <!-- <li class="nav__item"><a href="#about" class="nav__link">About</a></li> -->
                     <li class="nav__item"><a href="#giveaway" id="myDIV" class="nav__link">Giveaway</a></li>
+                    <li class="nav__item"><a href="#bluedotux" id="myDIV" class="nav__link">Bluedot UX</a></li>
                     <li class="nav__item"><a href="#services" id="myDIV" class="nav__link">Services</a></li>
                 <!-- <li class="nav__item"><a href="#features" class="nav__link">Features</a></li>
                     <li class="nav__item"><a href="#partners" class="nav__link">Partners</a></li> -->

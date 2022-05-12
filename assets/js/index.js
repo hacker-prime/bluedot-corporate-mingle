@@ -128,6 +128,23 @@ window.onscroll = function() {
     }
 };
 
+
+let bluedotux_btn = document.querySelector(".bluedotux_btn");
+let clip = document.querySelector(".clip");
+let video = document.querySelector("video");
+let bluedotux_close = document.querySelector(".bluedotux_close");
+bluedotux_btn.onclick = function(){
+  bluedotux_btn.classList.add("active");
+  clip.classList.add("active");
+  video.currentTime = 0;
+  video.play();
+}
+bluedotux_close.onclick = function(){
+  bluedotux_btn.classList.remove("active");
+  clip.classList.remove("active");
+  video.pause(); 
+}
+
   
   
   
