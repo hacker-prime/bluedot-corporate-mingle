@@ -5,15 +5,15 @@
 // Please note that both of the links above list similar solutions
 
 if($_SERVER['HTTP_HOST'] == 'localhost'){
-    $host = "localhost";
-    $username = "root";
+    $host = "";
+    $username = "";
     $password = "";
-    $database = "bluedotportal";
+    $database = "";
 }else{
-    $host = "localhost";
-    $username = "bluedotdeveloper";
-    $password = "scientia_potentia_est_1668";
-    $database = "bluedotportal";
+    $host = "";
+    $username = "";
+    $password = "";
+    $database = "";
 }
 
 $timezone = date_default_timezone_set("Jamaica");
